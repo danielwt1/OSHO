@@ -1,0 +1,11 @@
+/* aplica a todos los elementos box-sizing: border-box; */
+html {
+    box-sizing: border-box;
+    font-family: 'Bodoni Moda', serif;
+    //background-color: #f0e6d7;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    
+  }
+  

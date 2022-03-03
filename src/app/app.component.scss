@@ -1,0 +1,146 @@
+.app{
+    display: grid;
+    //flex-direction: column;
+
+     
+    .seccion-foto-contenedor{         
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        height: 300px;  
+        position: relative;
+        :is(.capa-abajo, .capa-arriba){
+            height: 100%;
+            
+            display: flex;
+            column-gap: 1em;
+          }
+        .contenedor-img{
+            width: 50%;
+            height: 100%;
+            background-size: cover;
+          }
+         img{
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+          }
+        :is(.img-izquierda-blur, .img-derecha-blur){
+            filter: blur(7px);
+          }
+        .capa-arriba{
+            width: 75%;
+            margin: 0 auto;
+            box-shadow: 1px 1px 10px 1px #EEEEEE;            
+            position: absolute;
+            left: 0;
+            right: 0;
+            top:0
+          }
+          .logo{
+  width: 150px;
+  height: 150px;
+  background-color: pink;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 10px solid #f3f3f3;
+  box-shadow: 1px 1px 10px 1px #EEEEEE;
+  
+  position: relative;
+  bottom: 25vh;
+}      
+    }
+}
+.main{
+    display: grid;
+    justify-items: center;
+    //position: relative;
+      
+   
+    
+}
+.contenido-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .seccion-nombre{
+        .nombre{
+            font-size: 50px;
+            font-weight:400px;
+        }
+    }
+   // 
+   .redes-sociales{
+       display: flex;
+       align-items: center;
+       #Facebook,#Instagram,#Pinterest,#TikTok{
+           color: black;
+           margin: 3px;
+           font-weight: 40px;
+            font-size: 25px;
+       }
+
+
+
+   }
+
+    .seccion-links{
+        
+        width: 450px;
+        height: 300px;
+        padding: 10px;
+        margin:20px 100px 80px 100px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        //content-box basa el tamaño segun el contenido es el default
+        //recomendabler es border-box porque se define de acuerdo al width
+       //box-sizing: border-box; //leer el css main
+       .links{
+           text-decoration: none;
+           color: black;
+           display: flex;
+           font-size: 25px;
+           border: lightgrey 1px solid;
+           //border-color: gray;
+           box-shadow: 8px 3px 3px gray;
+           padding: 12px;
+           .texto-link{
+               margin-left: 10px;
+           }
+           
+       }
+       a{
+           padding: 4px;
+           margin: 16px;
+           //Inline-block a la derecha y se pujede poner ancho y alto
+           //Display inline uno a la derecha del otro, block uno abajo del otro se le puede aplicar ancho y alto
+    
+           //background-color: blue;
+           // BORDER: WIDTH TIPO, COLOR
+       }
+    }
+}
+@media (max-width: 800px){
+    .seccion-foto-contenedor{
+        max-width: 50rem;
+        max-height: 12rem;
+    }
+    .app{
+        gap: 3rem;
+    }
+    .links{        
+        font-size: 2rem;
+    }
+    .seccion-links{
+        max-width: 20rem;
+    }
+    .logo{
+        max-width: 100px;
+        max-height: 100px;
+        bottom: 20vh!important;
+    }
+
+}
